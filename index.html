@@ -25,7 +25,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="#" class="logo">Tiago.<span>dev</span></a>
+        <a href="#" class="logo">Tiago ZHOU</a>
 
         <div class="hamburger">
             <span class="bar"></span>
@@ -101,9 +101,9 @@
         </div>
     </section>
 
-    <!-- EDUCATION & EXPERIENCE TIMELINE -->
+    <!-- EDUCATION TIMELINE -->
     <section id="education" class="section reveal bg-alt">
-        <h2 class="section-title">Parcours & Expériences</h2>
+        <h2 class="section-title">Formation</h2>
 
         <div class="timeline">
             <!-- BTS SIO -->
@@ -117,6 +117,24 @@
                 </div>
             </div>
 
+            <!-- Bac -->
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-date">2024</span>
+                    <h3>Baccalauréat Général</h3>
+                    <h4>Lycée Condorcet - Bordeaux</h4>
+                    <p>Spécialité Mathématiques / Informatique et Sciences du Numérique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="section reveal">
+        <h2 class="section-title">Expériences Professionnelles</h2>
+
+        <div class="timeline">
             <!-- Stage Penstyle -->
             <div class="timeline-item reveal">
                 <div class="timeline-dot"></div>
@@ -124,10 +142,8 @@
                     <span class="timeline-date">2026 (2ème année)</span>
                     <h3>Stage - Penstyleshoes</h3>
                     <h4>Bordeaux</h4>
-                    <p>Création complète d'un site vitrine avec e-commerce sur le thème du tatouage. Utilisation de
-                        Wordpress et Elementor en totale autonomie. Le site a été pensé avec une charte graphique
-                        spécifique au tatouage et adapté à tous les supports (responsive design PC, mobile, tablette).
-                    </p>
+                    <p>Création complète d'un site vitrine avec e-commerce sur le thème du tatouage. Cliquez ci-dessous
+                        pour découvrir les maquettes et technologies utilisées !</p>
                     <a href="pages/stage-penstyle.html" class="btn-primary"
                         style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">
                         <i class="fas fa-plus-circle"></i> En savoir plus
@@ -142,25 +158,12 @@
                     <span class="timeline-date">2025 (1ère année)</span>
                     <h3>Stage - Valeur Bâti</h3>
                     <h4>Landes</h4>
-                    <p>Création d'automatisations No-code (Zapier, Airtable, Baserow) pour améliorer la gestion des
-                        données (achats, devis, factures). L'entreprise faisait face à une gestion administrative
-                        manuelle. Ma mission a été de créer une base de données centralisée et d'automatiser le
-                        traitement des devis et factures.</p>
+                    <p>Mise en place d'automatisations No-code (Zapier, Airtable, Baserow) pour digitaliser et décupler
+                        la productivité administrative de l'entreprise.</p>
                     <a href="pages/stage-valeur-bati.html" class="btn-primary"
                         style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">
                         <i class="fas fa-plus-circle"></i> En savoir plus
                     </a>
-                </div>
-            </div>
-
-            <!-- Bac -->
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="timeline-date">2024</span>
-                    <h3>Baccalauréat Général</h3>
-                    <h4>Lycée Condorcet - Bordeaux</h4>
-                    <p>Spécialité Mathématiques / Informatique et Sciences du Numérique.</p>
                 </div>
             </div>
 
@@ -235,7 +238,7 @@
                         développé en Vanilla JavaScript ! Cliquez, achetez des améliorations et devenez le héros le plus
                         riche d'Hyrule !</p>
                 </div>
-                <a href="zelda.html" class="btn-primary"
+                <a href="pages/zelda.html" class="btn-primary"
                     style="justify-content: center; background-color: var(--rupee-green); box-shadow: 0 10px 20px rgba(46, 204, 113, 0.4);">
                     <i class="fas fa-play"></i> Jouer au jeu
                 </a>
@@ -248,65 +251,85 @@
     <section id="skills" class="section reveal">
         <h2 class="section-title">Mes Compétences</h2>
 
-        <div class="skills-container">
+        <div class="skills-grid"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px;">
             <!-- Dévelopement -->
-            <div class="skill-category glass-card">
-                <h3><i class="fas fa-code"></i> Développement</h3>
-                <div class="skill-item">
-                    <span>HTML / CSS</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>JavaScript</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>PHP / SQL</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>Java / POO</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 70%;"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>WordPress / Elementor</span>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 85%;"></div>
-                    </div>
+            <div class="skill-category glass-card" style="padding: 30px;">
+                <h3
+                    style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px; color: var(--accent-color); font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+                    <i class="fas fa-code"></i> Développement
+                </h3>
+                <div class="modern-skill-items" style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <div class="modern-skill-tag"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="modern-skill-tag"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    <div class="modern-skill-tag"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="modern-skill-tag"><i class="fab fa-php"></i> PHP</div>
+                    <div class="modern-skill-tag"><i class="fas fa-database"></i> SQL</div>
+                    <div class="modern-skill-tag"><i class="fab fa-java"></i> Java / POO</div>
+                    <div class="modern-skill-tag"><i class="fab fa-wordpress"></i> WordPress</div>
+                    <div class="modern-skill-tag"><i class="fab fa-elementor"></i> Elementor</div>
                 </div>
             </div>
 
             <!-- No-Code -->
-            <div class="skill-category glass-card">
-                <h3><i class="fas fa-magic"></i> No-Code & Ops</h3>
-                <div class="skill-tags">
-                    <span class="tag">Zapier</span>
-                    <span class="tag">Baserow</span>
-                    <span class="tag">Airtable</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">Merise / UML</span>
-                    <span class="tag">Méthode Agile</span>
+            <div class="skill-category glass-card" style="padding: 30px;">
+                <h3
+                    style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px; color: #d946ef; font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+                    <i class="fas fa-bolt"></i> No-Code & Ops
+                </h3>
+                <div class="modern-skill-items" style="display: flex; flex-wrap: wrap; gap: 12px;">
+                    <div class="modern-skill-tag pink-glow"><i class="fas fa-bolt"></i> Zapier</div>
+                    <div class="modern-skill-tag pink-glow"><i class="fas fa-table"></i> Baserow</div>
+                    <div class="modern-skill-tag pink-glow"><i class="fas fa-cloud"></i> Airtable</div>
+                    <div class="modern-skill-tag pink-glow"><i class="fab fa-git-alt"></i> Git</div>
+                    <div class="modern-skill-tag pink-glow"><i class="fas fa-project-diagram"></i> Merise / UML</div>
+                    <div class="modern-skill-tag pink-glow"><i class="fas fa-tasks"></i> Méthode Agile</div>
                 </div>
             </div>
 
             <!-- Cybersécurité & Système -->
-            <div class="skill-category glass-card">
-                <h3><i class="fas fa-shield-alt"></i> Cyber & Système</h3>
-                <ul class="check-list">
-                    <li><i class="fas fa-check"></i> Machines Virtuelles</li>
-                    <li><i class="fas fa-check"></i> Adressage IP & Sous-réseaux</li>
-                    <li><i class="fas fa-check"></i> Sécurisation Système & RGPD</li>
-                    <li><i class="fas fa-check"></i> Contre-mesures & Anti-virus</li>
-                    <li><i class="fas fa-check"></i> Montage matériel</li>
-                </ul>
+            <div class="skill-category glass-card" style="padding: 30px;">
+                <h3
+                    style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px; color: var(--rupee-green); font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+                    <i class="fas fa-shield-alt"></i> Cyber & Système
+                </h3>
+                <div class="modern-skill-items" style="display: flex; flex-direction: column; gap: 15px;">
+                    <div class="cyber-skill-item"
+                        style="display: flex; align-items: center; gap: 15px; padding: 12px; background: rgba(46, 204, 113, 0.05); border-radius: 10px; border: 1px solid rgba(46, 204, 113, 0.2);">
+                        <i class="fas fa-server" style="color: var(--rupee-green); font-size: 1.2rem;"></i>
+                        <span>Machines Virtuelles</span>
+                    </div>
+                    <div class="cyber-skill-item"
+                        style="display: flex; align-items: center; gap: 15px; padding: 12px; background: rgba(46, 204, 113, 0.05); border-radius: 10px; border: 1px solid rgba(46, 204, 113, 0.2);">
+                        <i class="fas fa-network-wired" style="color: var(--rupee-green); font-size: 1.2rem;"></i>
+                        <span>Adressage IP & Sous-réseaux</span>
+                    </div>
+                    <div class="cyber-skill-item"
+                        style="display: flex; align-items: center; gap: 15px; padding: 12px; background: rgba(46, 204, 113, 0.05); border-radius: 10px; border: 1px solid rgba(46, 204, 113, 0.2);">
+                        <i class="fas fa-user-shield" style="color: var(--rupee-green); font-size: 1.2rem;"></i>
+                        <span>Sécurisation & RGPD</span>
+                    </div>
+                    <div class="cyber-skill-item"
+                        style="display: flex; align-items: center; gap: 15px; padding: 12px; background: rgba(46, 204, 113, 0.05); border-radius: 10px; border: 1px solid rgba(46, 204, 113, 0.2);">
+                        <i class="fas fa-virus-slash" style="color: var(--rupee-green); font-size: 1.2rem;"></i>
+                        <span>Contre-mesures & Anti-virus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY WATCH SECTION -->
+    <section id="watch" class="section reveal">
+        <h2 class="section-title">Veille Technologique</h2>
+        <p style="text-align: center; margin-bottom: 40px; color: var(--text-secondary);">Dernières actualités sur le
+            Cloud, GitHub Copilot et le développement (Flux RSS dynamique).</p>
+
+        <div id="rss-feed-container" class="rss-grid">
+            <!-- Les articles RSS seront injectés ici par JavaScript -->
+            <div style="text-align: center; width: 100%; grid-column: 1 / -1;">
+                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--accent-color);"></i>
+                <p style="margin-top: 10px;">Chargement des articles en cours...</p>
             </div>
         </div>
     </section>
