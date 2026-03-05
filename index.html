@@ -322,8 +322,32 @@
     <!-- TECHNOLOGY WATCH SECTION -->
     <section id="watch" class="section reveal">
         <h2 class="section-title">Veille Technologique</h2>
-        <p style="text-align: center; margin-bottom: 40px; color: var(--text-secondary);">Dernières actualités sur le
-            Cloud, GitHub Copilot et le développement (Flux RSS dynamique).</p>
+
+        <div class="glass-card" style="max-width: 900px; margin: 0 auto 50px; padding: 40px; text-align: left;">
+            <h3 style="color: var(--accent-color); margin-bottom: 15px; font-size: 1.5rem;">La veille technologique,
+                c'est quoi ?</h3>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 30px;">
+                La veille technologique est un processus continu et organisé qui consiste à surveiller, collecter,
+                analyser et diffuser des informations sur les innovations et les tendances dans un domaine technique et
+                scientifique donné.
+            </p>
+
+            <h3 style="color: var(--accent-color); margin-bottom: 15px; font-size: 1.5rem;">Le sujet de ma veille
+                technologique :</h3>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 15px; font-weight: 500;">
+                Le thème que j'ai choisi pour ma veille est : " L'intégration de l'IA et du cloud dans le développement
+                avec GitHub (Copilot & Codespaces) "
+            </p>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 0;">
+                J'ai choisi de me concentrer sur l'évolution des outils de développement, notamment l'écosystème GitHub.
+                L'objectif est de comprendre comment l'intégration croissante de l'intelligence artificielle (IA) et des
+                environnements de cloud computing (Cloud) transforme nos méthodes de travail. Mon analyse porte sur les
+                actualités de deux outils phares : GitHub Copilot et GitHub Codespaces.
+            </p>
+        </div>
+
+        <h3 style="font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Actualités GitHub Copilot & Codespaces
+            (2025)</h3>
 
         <div id="rss-feed-container" class="rss-grid">
             <!-- Les articles RSS seront injectés ici par JavaScript -->
@@ -353,20 +377,6 @@
                     </a>
                 </div>
             </div>
-
-            <form class="contact-form glass-card"
-                onsubmit="event.preventDefault(); alert('Message envoyé ! (Simulation)');">
-                <div class="input-group">
-                    <input type="text" placeholder="Votre Nom" required>
-                </div>
-                <div class="input-group">
-                    <input type="email" placeholder="Votre Email" required>
-                </div>
-                <div class="input-group">
-                    <textarea placeholder="Votre Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-primary w-100">Envoyer Message</button>
-            </form>
         </div>
     </section>
 
