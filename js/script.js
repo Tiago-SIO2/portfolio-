@@ -11,10 +11,10 @@ if (currentTheme) {
     if (currentTheme === 'dark') {
         icon.classList.replace('fa-moon', 'fa-sun');
     }
-} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // Check user system preference
-    document.documentElement.setAttribute('data-theme', 'dark');
-    icon.classList.replace('fa-moon', 'fa-sun');
+} else {
+    // FORCE Light/Frost theme as default for maximum impact
+    document.documentElement.setAttribute('data-theme', 'light');
+    icon.classList.replace('fa-sun', 'fa-moon');
 }
 
 themeSwitch.addEventListener('click', () => {
@@ -44,17 +44,25 @@ window.addEventListener('scroll', () => {
 });
 
 // ==========================================
-// MOBILE TENDER (Hamburger)
+// MOBILE MENU (Hamburger)
 // ==========================================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
 
-// Close menu when a link is clicked
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+}
 document.querySelectorAll('.nav-links li a').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navLinks.classList.remove('active');
@@ -87,47 +95,42 @@ document.addEventListener("DOMContentLoaded", () => {
     const rssContainer = document.getElementById("rss-feed-container");
     if (!rssContainer) return;
 
-    // Use a reliable RSS-to-JSON API or public proxy
-    // We mix two feeds: GitHub Blog (Copilot) & Azure Blog (Cloud) or just a general dev feed.
-    // For simplicity, we use the free rss2json api to parse the Microsoft/GitHub Engineering blog
-    const rssUrl = encodeURIComponent("https://github.blog/feed/");
-    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}&api_key=`;
+    // We use the Dev.to API for reliable tech news, filtering specifically for the user's tech watch topic
+    const apiUrl = `https://dev.to/api/articles?tag=githubcopilot&per_page=3`;
 
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
-                throw new Error("Erreur lors de la récupération du flux RSS");
+                throw new Error("Erreur lors de la récupération des articles");
             }
             return response.json();
         })
-        .then(data => {
-            if (data.status === "ok" && data.items.length > 0) {
+        .then(articles => {
+            if (articles && articles.length > 0) {
                 rssContainer.innerHTML = ''; // Clear loading spinner
-                // Only take the first 3 items
-                const articles = data.items.slice(0, 3);
 
                 articles.forEach(article => {
-                    // Extract a clean description (strip HTML tags)
-                    let cleanDesc = article.description.replace(/<[^>]+>/g, '');
+                    // Extract a clean description
+                    let cleanDesc = article.description || "Découvrez cet article intéressant sur l'écosystème GitHub et l'IA.";
                     if (cleanDesc.length > 150) cleanDesc = cleanDesc.substring(0, 150) + '...';
 
                     // Format Date
-                    const pubDate = new Date(article.pubDate).toLocaleDateString("fr-FR", {
+                    const pubDate = new Date(article.published_at).toLocaleDateString("fr-FR", {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
                     });
 
-                    // Build HTML Card
+                    // Build HTML Card (Using Soft Minimalist glass-card style)
                     const cardHTML = `
-                        <div class="rss-card reveal">
+                        <div class="rss-card glass-card reveal">
                             <div>
                                 <span class="rss-date"><i class="far fa-calendar-alt"></i> ${pubDate}</span>
-                                <h3 class="rss-title"><a href="${article.link}" target="_blank" rel="noopener noreferrer">${article.title}</a></h3>
+                                <h3 class="rss-title"><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></h3>
                                 <p class="rss-desc">${cleanDesc}</p>
                             </div>
                             <div style="margin-top: 15px;">
-                                <a href="${article.link}" target="_blank" rel="noopener noreferrer" class="rss-link">
+                                <a href="${article.url}" target="_blank" rel="noopener noreferrer" class="rss-link">
                                     Lire l'article <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -135,18 +138,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     `;
                     rssContainer.insertAdjacentHTML('beforeend', cardHTML);
                 });
-                // Force reveal on newly added elements if they are already visible
+
+                // Force reveal on newly added elements
                 setTimeout(reveal, 100);
             } else {
-                throw new Error("Format de données invalide");
+                throw new Error("Aucun article trouvé");
             }
         })
         .catch(error => {
             console.error(error);
             rssContainer.innerHTML = `
-                <div style="text-align: center; width: 100%; grid-column: 1 / -1; color: #ef4444;">
-                    <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                    <p>Impossible de charger le flux RSS pour le moment.<br>Veuillez réessayer plus tard.</p>
+                <div style="text-align: center; width: 100%; grid-column: 1 / -1; padding: 30px;" class="glass-card">
+                    <i class="fas fa-satellite-dish" style="font-size: 2.5rem; color: var(--text-secondary); margin-bottom: 15px;"></i>
+                    <h3 style="margin-bottom: 10px; color: var(--text-primary);">Oups... Le radar est brouillé.</h3>
+                    <p style="color: var(--text-secondary);">Impossible de charger les actualités en direct pour le moment. Veuillez réessayer plus tard.</p>
                 </div>
             `;
         });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -34,11 +34,11 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="#about">À Propos</a></li>
+            <li><a href="#about">CV</a></li>
             <li><a href="#education">Formation</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#experience">Expériences</a></li>
+            <li><a href="#experience">Stages</a></li>
             <li><a href="#projects">Projets Persos</a></li>
+            <li><a href="#skills">Compétences</a></li>
             <li><a href="#watch">Veille</a></li>
             <li><a href="#contact" class="btn-contact">Contact</a></li>
         </ul>
@@ -46,9 +46,10 @@
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
+        <div class="ambient-bg">
+            <div class="ambient-blob ambient-1"></div>
+            <div class="ambient-blob ambient-2"></div>
+            <div class="ambient-blob ambient-3"></div>
         </div>
         <div class="hero-content section reveal">
             <span class="greeting">Bonjour, je suis</span>
@@ -132,7 +133,7 @@
 
     <!-- EXPERIENCE TIMELINE -->
     <section id="experience" class="section reveal">
-        <h2 class="section-title">Expériences Professionnelles</h2>
+        <h2 class="section-title">Stages</h2>
 
         <div class="timeline">
             <!-- Stage Penstyle -->
@@ -182,7 +183,7 @@
 
     <!-- PROJECTS & ZELDA CLICKER SECTION -->
     <section id="projects" class="section reveal">
-        <h2 class="section-title">Projets & Projets Persos</h2>
+        <h2 class="section-title">Projets Classe & Projets Persos</h2>
         <p style="text-align: center; margin-bottom: 40px; color: var(--text-secondary);">Découvrez mes réalisations et
             un mini-jeu exclusif !</p>
 
@@ -213,17 +214,31 @@
                 </div>
             </div>
 
-            <!-- Projet DAO & Fa -->
+            <!-- Projet DAO -->
             <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
                     <i class="fas fa-database"
                         style="font-size: 3rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Projets PHP (DAO & Fâ)</h3>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Projets PHP (DAO)</h3>
                     <p style="color: var(--text-secondary); margin-bottom: 15px;">Dans le cadre des "Ateliers
-                        professionnels", développement en groupe d'applications PHP implémentant le design pattern DAO
-                        pour séparer l'accès aux données de la logique métier, rendant le code plus propre et
-                        maintenable.</p>
+                        professionnels", développement d'applications PHP implémentant le design pattern DAO pour
+                        séparer l'accès aux données de la logique métier, rendant le code plus propre et maintenable.
+                    </p>
                 </div>
+            </div>
+
+            <!-- Projet Fa -->
+            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <i class="fas fa-project-diagram"
+                        style="font-size: 3rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Projet Fâ</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Présentation détaillée et technique de
+                        mon implication dans le Projet Fâ (Page en cours de rédaction).</p>
+                </div>
+                <a href="pages/projet-fa.html" class="btn-secondary" style="align-self: flex-start; margin-top: auto;">
+                    Découvrir le projet <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
+                </a>
             </div>
 
             <!-- Zelda Clicker Redirect -->

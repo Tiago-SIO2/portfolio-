@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Fâ - Tiago ZHOU</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- HEADER / NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="../index.html" class="logo">Tiago<span>ZHOU</span></a>
+        <ul>
+            <li><a href="../index.html#home">Retour à l'accueil</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Activer le mode sombre">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg" style="z-index: -1;">
+        <div class="ambient-blob ambient-1"></div>
+        <div class="ambient-blob ambient-2"></div>
+        <div class="ambient-blob ambient-3"></div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <section class="section"
+        style="padding-top: 150px; min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <div class="glass-card" style="max-width: 800px; padding: 50px; position: relative; z-index: 10;">
+            <i class="fas fa-hammer" style="font-size: 4rem; color: var(--accent-color); margin-bottom: 20px;"></i>
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--text-primary);">Projet Fâ</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 30px;">
+                Cette page est actuellement en construction. J'ajouterai tous les détails, les objectifs, et les
+                technologies utilisées pour le Projet Fâ dès que possible !
+            </p>
+            <a href="../index.html#projects" class="btn-primary"
+                style="display: inline-flex; align-items: center; gap: 10px;">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 - 2025 Tiago ZHOU. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
