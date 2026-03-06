@@ -6,49 +6,58 @@
     --font-primary: 'Outfit', sans-serif;
     --font-secondary: 'Inter', sans-serif;
 
-    /* COLORS - LIGHT MODE (Frosty, Pure, High-Contrast) */
-    --bg-color: #f8fafc;
-    /* Very light cool frost */
-    --bg-secondary: #ffffff;
-    --text-primary: #0f172a;
-    /* Sharp Slate */
-    --text-secondary: #475569;
-    --accent-color: #d51313;
-    /* Striking Emerald Green */
-    --accent-glow: rgba(38, 180, 69, 0.921);
-    --border-color: rgba(176, 13, 13, 0.08);
+    /* COLORS - LIGHT MODE (Japanese Sakura Aesthetic) */
+    --bg-color: #FFF6F8;
+    /* Soft Cherry Blossom White/Pink */
+    --bg-secondary: #FFFFFF;
+    --text-primary: #2d2024;
+    /* Dark Plum / Ink */
+    --text-secondary: #7a6368;
+    /* Muted Rose Gray */
+    --accent-color: #FF7AA2;
+    /* Vibrant Sakura Pink */
+    --accent-glow: rgba(255, 122, 162, 0.15);
+    /* Soft pink glow */
+    --border-color: rgba(255, 122, 162, 0.2);
+    /* Soft pink borders */
 
     /* FROST GLASSMORPHISM */
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.8);
-    --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
-    /* Very light, wide shadow */
-    --shadow-hover: 0 20px 40px -10px rgba(5, 150, 105, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(255, 122, 162, 0.15);
+    /* Soft pink frost border */
+    --shadow-soft: 0 10px 40px -10px rgba(255, 122, 162, 0.1);
+    --shadow-hover: 0 20px 40px -10px rgba(255, 122, 162, 0.3);
 
-    /* ZELDA COLORS */
-    --rupee-green: #35d75a;
+    /* ZELDA COLORS (Adjusted for theme balance) */
+    --rupee-green: #00A86B;
+    /* Jade green */
+
+    /* LOGO/BRANDS */
+    --gold-color: #D4AF37;
 
     /* ANIMATIONS */
     --transition-fast: 0.2s ease-out;
     --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* DARK MODE VARIABLES (Sharp Obsidian, secondary experience) */
+/* DARK MODE VARIABLES (Night Cherry Blossom / Yozakura) */
 [data-theme="dark"] {
-    --bg-color: #0f172a;
-    /* Slate Dark */
-    --bg-secondary: #3834363c;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --accent-color: #2b6aad;
-    /* Brighter Emerald for Dark Mode */
-    --accent-glow: rgba(11, 66, 62, 0.2);
-    --border-color: rgba(255, 255, 255, 0.05);
+    --bg-color: #1A1115;
+    /* Very dark plum/ink */
+    --bg-secondary: #26181e;
+    --text-primary: #FCEBF0;
+    /* Soft moonlight pink/white */
+    --text-secondary: #d1b8c0;
+    /* Muted light rose */
+    --accent-color: #FFB3C6;
+    /* Luminous soft pink */
+    --accent-glow: rgba(255, 179, 198, 0.15);
+    --border-color: rgba(255, 179, 198, 0.2);
 
-    --glass-bg: rgba(30, 41, 59, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 20px 40px -10px rgba(48, 39, 149, 0.779);
+    --glass-bg: rgba(38, 24, 30, 0.65);
+    --glass-border: rgba(255, 179, 198, 0.1);
+    --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 20px 40px -10px rgba(255, 179, 198, 0.25);
 }
 
 /* =========================================
@@ -261,6 +270,11 @@ ul {
     align-items: center;
     position: relative;
     overflow: hidden;
+    background-image: url('../assets/sakura_hero_bg.png');
+    background-size: cover;
+    background-position: right center;
+    background-color: #0d0a0b;
+    /* Dark fallback */
 }
 
 .hero-content {
@@ -379,8 +393,8 @@ ul {
     left: -10%;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, #631e43 0%, transparent 60%);
-    /* Mint Frost */
+    background: radial-gradient(circle, rgba(255, 122, 162, 0.4) 0%, transparent 60%);
+    /* Sakura Pink */
     animation-duration: 28s;
 }
 
@@ -389,8 +403,8 @@ ul {
     right: -10%;
     width: 70vw;
     height: 70vw;
-    background: radial-gradient(circle, #920dcb 0%, transparent 60%);
-    /* Ice Blue */
+    background: radial-gradient(circle, rgba(219, 112, 147, 0.3) 0%, transparent 60%);
+    /* Pale violet red */
     animation-duration: 32s;
     animation-delay: -5s;
 }
@@ -400,8 +414,8 @@ ul {
     left: 40%;
     width: 50vw;
     height: 50vw;
-    background: radial-gradient(circle, #fed7aa 0%, transparent 60%);
-    /* Soft Sand Frost */
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.35) 0%, transparent 60%);
+    /* Light Pink */
     animation-duration: 25s;
     animation-delay: -10s;
 }
@@ -421,6 +435,27 @@ ul {
 
     100% {
         transform: translate(0px, 0px) scale(1);
+    }
+}
+
+/* SAKURA PETAL ANIMATIONS */
+@keyframes fall {
+    0% {
+        top: -10%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+@keyframes sway {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(30px) rotate(45deg);
     }
 }
 

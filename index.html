@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&family=Great+Vibes&display=swap"
         rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,7 +25,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <a href="#" class="logo">Tiago ZHOU</a>
+        <a href="index.html" class="logo">Tiago ZHOU</a>
 
         <div class="hamburger">
             <span class="bar"></span>
@@ -34,374 +34,49 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="#about">CV</a></li>
-            <li><a href="#education">Formation</a></li>
-            <li><a href="#experience">Stages</a></li>
-            <li><a href="#projects">Projets Persos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#watch">Veille</a></li>
-            <li><a href="#contact" class="btn-contact">Contact</a></li>
+            <li><a href="index.html" style="font-weight: 700; color: var(--accent-color);">Accueil</a></li>
+            <li><a href="pages/cv.html">CV</a></li>
+            <li><a href="pages/stages.html">Stages</a></li>
+            <li><a href="pages/projets.html">Projets</a></li>
+            <li><a href="pages/veille.html">Veille</a></li>
+            <li><a href="pages/contact.html" class="btn-contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
-        <div class="ambient-bg">
-            <div class="ambient-blob ambient-1"></div>
-            <div class="ambient-blob ambient-2"></div>
-            <div class="ambient-blob ambient-3"></div>
-        </div>
-        <div class="hero-content section reveal">
-            <span class="greeting">Bonjour, je suis</span>
-            <h1 class="hero-title">Tiago ZHOU</h1>
-            <h2 class="hero-subtitle">Étudiant en BTS SIO (option SLAM)</h2>
-            <p class="hero-desc">Passionné d’informatique et de solutions digitales, je conçois des outils pour
-                simplifier la gestion et gagner en efficacité. Découvrez mon parcours et mes projets !</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-primary">
+
+        <div class="hero-content section reveal" style="text-align: left; max-width: 600px; padding-left: 5%; margin: 0;">
+            <span class="greeting" style="color: #FFB3C6; font-size: 1.5rem; letter-spacing: 2px;">Bonjour, je
+                suis</span>
+            <h1 class="hero-title"
+                style="color: #FFF6F8; text-shadow: 0 0 20px rgba(255, 122, 162, 0.4); margin: 10px 0; padding-top: 10px;">
+                Tiago ZHOU</h1>
+            <h2 class="hero-subtitle" style="color: #FCEBF0;">Étudiant en BTS SIO (option SLAM)</h2>
+            <p class="hero-desc" style="color: #d1b8c0; font-size: 1.1rem; margin-top: 20px;">Passionné d’informatique
+                et de solutions digitales, je conçois des outils pour simplifier la gestion et gagner en efficacité.
+                Découvrez mon parcours et mes projets !</p>
+            <div class="hero-buttons" style="justify-content: flex-start;">
+                <a href="pages/cv.html" class="btn-primary"
+                    style="background-color: var(--accent-color); color: #1A1115;">
+                    <i class="fas fa-user"></i> Mon profil
+                </a>
+                <a href="pages/projets.html" class="btn-secondary"
+                    style="color: #FCEBF0; border-color: rgba(255, 179, 198, 0.3);">
                     <i class="fas fa-folder-open"></i> Voir mes projets
                 </a>
-                <a href="#contact" class="btn-secondary">
-                    <i class="fas fa-envelope"></i> Me contacter
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section reveal">
-        <h2 class="section-title">À Propos de moi</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Je m’appelle Tiago Zhou, j’ai 20 ans et je suis étudiant en 2ème année au Lycée Saint-John Perse de
-                    Pau. Je me spécialise dans le développement d’applications et la gestion de bases de données.</p>
-                <p>Rigoureux, motivé et à l’aise dans le travail en équipe, je souhaite mettre mes compétences au
-                    service d’une entreprise dynamique.</p>
-
-                <h3 class="subsection-title">Langues & Autres Activités</h3>
-                <ul class="languages-list">
-                    <li><i class="fas fa-check-circle"></i> Anglais (A2)</li>
-                    <li><i class="fas fa-check-circle"></i> Espagnol (A2)</li>
-                    <li><i class="fas fa-check-circle"></i> Chinois (B1)</li>
-                </ul>
-                <p class="hobbies-text">Je pratique régulièrement la musculation, ce qui m’a appris la discipline, la
-                    rigueur et la patience pour atteindre mes objectifs.</p>
-            </div>
-            <div class="about-card glass-card">
-                <div class="stat-box">
-                    <i class="fas fa-code"></i>
-                    <h4>+2 Ans</h4>
-                    <p>Développement</p>
-                </div>
-                <div class="stat-box">
-                    <i class="fas fa-laptop-code"></i>
-                    <h4>SLAM</h4>
-                    <p>Option BTS SIO</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EDUCATION TIMELINE -->
-    <section id="education" class="section reveal bg-alt">
-        <h2 class="section-title">Formation</h2>
-
-        <div class="timeline">
-            <!-- BTS SIO -->
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="timeline-date">2024 - 2026</span>
-                    <h3>BTS SIO option SLAM</h3>
-                    <h4>Lycée Saint-John Perse PAU</h4>
-                    <p>Solutions Logicielles et Applications Métiers.</p>
-                </div>
-            </div>
-
-            <!-- Bac -->
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="timeline-date">2024</span>
-                    <h3>Baccalauréat Général</h3>
-                    <h4>Lycée Condorcet - Bordeaux</h4>
-                    <p>Spécialité Mathématiques / Informatique et Sciences du Numérique.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE TIMELINE -->
-    <section id="experience" class="section reveal">
-        <h2 class="section-title">Stages</h2>
-
-        <div class="timeline">
-            <!-- Stage Penstyle -->
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="timeline-date">2026 (2ème année)</span>
-                    <h3>Stage - Penstyleshoes</h3>
-                    <h4>Bordeaux</h4>
-                    <p>Création complète d'un site vitrine avec e-commerce sur le thème du tatouage. Cliquez ci-dessous
-                        pour découvrir les maquettes et technologies utilisées !</p>
-                    <a href="pages/stage-penstyle.html" class="btn-primary"
-                        style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">
-                        <i class="fas fa-plus-circle"></i> En savoir plus
-                    </a>
-                </div>
-            </div>
-
-            <!-- Stage Valeur Bati -->
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="timeline-date">2025 (1ère année)</span>
-                    <h3>Stage - Valeur Bâti</h3>
-                    <h4>Landes</h4>
-                    <p>Mise en place d'automatisations No-code (Zapier, Airtable, Baserow) pour digitaliser et décupler
-                        la productivité administrative de l'entreprise.</p>
-                    <a href="pages/stage-valeur-bati.html" class="btn-primary"
-                        style="margin-top: 15px; padding: 8px 20px; font-size: 0.9rem;">
-                        <i class="fas fa-plus-circle"></i> En savoir plus
-                    </a>
-                </div>
-            </div>
-
-            <!-- Ami Buffet -->
-            <div class="timeline-item reveal">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="timeline-date">Stage de 3ème</span>
-                    <h3>Employé polyvalent</h3>
-                    <h4>Restaurant Ami Buffet, Bordeaux Lac</h4>
-                    <p>Service en salle et prise de commandes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS & ZELDA CLICKER SECTION -->
-    <section id="projects" class="section reveal">
-        <h2 class="section-title">Projets Classe & Projets Persos</h2>
-        <p style="text-align: center; margin-bottom: 40px; color: var(--text-secondary);">Découvrez mes réalisations et
-            un mini-jeu exclusif !</p>
-
-        <div class="projects-container"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-
-            <!-- Projet CV -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <i class="fas fa-portrait"
-                        style="font-size: 3rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Site Web Personnel (CV)</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Mise en pratique de mes compétences
-                        fondamentales en développement web (HTML, CSS, Javascript) pour concevoir un CV en ligne
-                        interactif.</p>
-                </div>
-            </div>
-
-            <!-- Pic du Midi -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <i class="fas fa-mountain"
-                        style="font-size: 3rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Pic du Midi</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Apprentissage avancé du CMS WordPress
-                        et Elementor (ainsi que tablePress) pour reproduire la charte graphique et l'identité numérique
-                        de l'organisation.</p>
-                </div>
-            </div>
-
-            <!-- Projet DAO -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <i class="fas fa-database"
-                        style="font-size: 3rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Projets PHP (DAO)</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">Dans le cadre des "Ateliers
-                        professionnels", développement d'applications PHP implémentant le design pattern DAO pour
-                        séparer l'accès aux données de la logique métier, rendant le code plus propre et maintenable.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Projet Fa -->
-            <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <i class="fas fa-project-diagram"
-                        style="font-size: 3rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Projet Fâ</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Présentation détaillée et technique de
-                        mon implication dans le Projet Fâ (Page en cours de rédaction).</p>
-                </div>
-                <a href="pages/projet-fa.html" class="btn-secondary" style="align-self: flex-start; margin-top: auto;">
-                    Découvrir le projet <i class="fas fa-arrow-right" style="margin-left: 5px;"></i>
-                </a>
-            </div>
-
-            <!-- Zelda Clicker Redirect -->
-            <div class="glass-card"
-                style="display: flex; flex-direction: column; justify-content: space-between; border: 2px solid var(--rupee-green); background: rgba(46, 204, 113, 0.05);">
-                <div style="text-align: center;">
-                    <img src="assets/green_rupee.png" alt="Zelda Rupee"
-                        style="width: 60px; height: 60px; margin-bottom: 15px; filter: drop-shadow(0 0 10px rgba(46, 204, 113, 0.6));">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: var(--rupee-green);">Zelda Rupee Clicker
-                    </h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Amusez-vous avec ce mini-jeu que j'ai
-                        développé en Vanilla JavaScript ! Cliquez, achetez des améliorations et devenez le héros le plus
-                        riche d'Hyrule !</p>
-                </div>
-                <a href="pages/zelda.html" class="btn-primary"
-                    style="justify-content: center; background-color: var(--rupee-green); box-shadow: 0 10px 20px rgba(46, 204, 113, 0.4);">
-                    <i class="fas fa-play"></i> Jouer au jeu
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section reveal">
-        <h2 class="section-title">Mes Compétences</h2>
-
-        <div class="skills-grid"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px;">
-            <!-- Dévelopement -->
-            <div class="skill-category glass-card" style="padding: 30px;">
-                <h3
-                    style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px; color: var(--accent-color); font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
-                    <i class="fas fa-code"></i> Développement
-                </h3>
-                <div class="modern-skill-items" style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <div class="modern-skill-tag"><i class="fab fa-html5"></i> HTML5</div>
-                    <div class="modern-skill-tag"><i class="fab fa-css3-alt"></i> CSS3</div>
-                    <div class="modern-skill-tag"><i class="fab fa-js"></i> JavaScript</div>
-                    <div class="modern-skill-tag"><i class="fab fa-php"></i> PHP</div>
-                    <div class="modern-skill-tag"><i class="fas fa-database"></i> SQL</div>
-                    <div class="modern-skill-tag"><i class="fab fa-java"></i> Java / POO</div>
-                    <div class="modern-skill-tag"><i class="fab fa-wordpress"></i> WordPress</div>
-                    <div class="modern-skill-tag"><i class="fab fa-elementor"></i> Elementor</div>
-                </div>
-            </div>
-
-            <!-- No-Code -->
-            <div class="skill-category glass-card" style="padding: 30px;">
-                <h3
-                    style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px; color: #d946ef; font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
-                    <i class="fas fa-bolt"></i> No-Code & Ops
-                </h3>
-                <div class="modern-skill-items" style="display: flex; flex-wrap: wrap; gap: 12px;">
-                    <div class="modern-skill-tag pink-glow"><i class="fas fa-bolt"></i> Zapier</div>
-                    <div class="modern-skill-tag pink-glow"><i class="fas fa-table"></i> Baserow</div>
-                    <div class="modern-skill-tag pink-glow"><i class="fas fa-cloud"></i> Airtable</div>
-                    <div class="modern-skill-tag pink-glow"><i class="fab fa-git-alt"></i> Git</div>
-                    <div class="modern-skill-tag pink-glow"><i class="fas fa-project-diagram"></i> Merise / UML</div>
-                    <div class="modern-skill-tag pink-glow"><i class="fas fa-tasks"></i> Méthode Agile</div>
-                </div>
-            </div>
-
-            <!-- Cybersécurité & Système -->
-            <div class="skill-category glass-card" style="padding: 30px;">
-                <h3
-                    style="display: flex; align-items: center; gap: 15px; margin-bottom: 25px; color: var(--rupee-green); font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
-                    <i class="fas fa-shield-alt"></i> Cyber & Système
-                </h3>
-                <div class="modern-skill-items" style="display: flex; flex-direction: column; gap: 15px;">
-                    <div class="cyber-skill-item"
-                        style="display: flex; align-items: center; gap: 15px; padding: 12px; background: rgba(46, 204, 113, 0.05); border-radius: 10px; border: 1px solid rgba(46, 204, 113, 0.2);">
-                        <i class="fas fa-server" style="color: var(--rupee-green); font-size: 1.2rem;"></i>
-                        <span>Machines Virtuelles</span>
-                    </div>
-                    <div class="cyber-skill-item"
-                        style="display: flex; align-items: center; gap: 15px; padding: 12px; background: rgba(46, 204, 113, 0.05); border-radius: 10px; border: 1px solid rgba(46, 204, 113, 0.2);">
-                        <i class="fas fa-network-wired" style="color: var(--rupee-green); font-size: 1.2rem;"></i>
-                        <span>Adressage IP & Sous-réseaux</span>
-                    </div>
-                    <div class="cyber-skill-item"
-                        style="display: flex; align-items: center; gap: 15px; padding: 12px; background: rgba(46, 204, 113, 0.05); border-radius: 10px; border: 1px solid rgba(46, 204, 113, 0.2);">
-                        <i class="fas fa-user-shield" style="color: var(--rupee-green); font-size: 1.2rem;"></i>
-                        <span>Sécurisation & RGPD</span>
-                    </div>
-                    <div class="cyber-skill-item"
-                        style="display: flex; align-items: center; gap: 15px; padding: 12px; background: rgba(46, 204, 113, 0.05); border-radius: 10px; border: 1px solid rgba(46, 204, 113, 0.2);">
-                        <i class="fas fa-virus-slash" style="color: var(--rupee-green); font-size: 1.2rem;"></i>
-                        <span>Contre-mesures & Anti-virus</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TECHNOLOGY WATCH SECTION -->
-    <section id="watch" class="section reveal">
-        <h2 class="section-title">Veille Technologique</h2>
-
-        <div class="glass-card" style="max-width: 900px; margin: 0 auto 50px; padding: 40px; text-align: left;">
-            <h3 style="color: var(--accent-color); margin-bottom: 15px; font-size: 1.5rem;">La veille technologique,
-                c'est quoi ?</h3>
-            <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 30px;">
-                La veille technologique est un processus continu et organisé qui consiste à surveiller, collecter,
-                analyser et diffuser des informations sur les innovations et les tendances dans un domaine technique et
-                scientifique donné.
-            </p>
-
-            <h3 style="color: var(--accent-color); margin-bottom: 15px; font-size: 1.5rem;">Le sujet de ma veille
-                technologique :</h3>
-            <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 15px; font-weight: 500;">
-                Le thème que j'ai choisi pour ma veille est : " L'intégration de l'IA et du cloud dans le développement
-                avec GitHub (Copilot & Codespaces) "
-            </p>
-            <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 0;">
-                J'ai choisi de me concentrer sur l'évolution des outils de développement, notamment l'écosystème GitHub.
-                L'objectif est de comprendre comment l'intégration croissante de l'intelligence artificielle (IA) et des
-                environnements de cloud computing (Cloud) transforme nos méthodes de travail. Mon analyse porte sur les
-                actualités de deux outils phares : GitHub Copilot et GitHub Codespaces.
-            </p>
-        </div>
-
-        <h3 style="font-size: 1.8rem; margin-bottom: 30px; text-align: center;">Actualités GitHub Copilot & Codespaces
-            (2025)</h3>
-
-        <div id="rss-feed-container" class="rss-grid">
-            <!-- Les articles RSS seront injectés ici par JavaScript -->
-            <div style="text-align: center; width: 100%; grid-column: 1 / -1;">
-                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--accent-color);"></i>
-                <p style="margin-top: 10px;">Chargement des articles en cours...</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section reveal bg-alt">
-        <h2 class="section-title">Contactez-moi</h2>
-        <div class="contact-container">
-            <div class="contact-info glass-card">
-                <h3>Prêt pour une nouvelle aventure ?</h3>
-                <p>N'hésitez pas à me contacter pour toute proposition de stage, d'alternance ou de projet !</p>
-
-                <div class="contact-methods">
-                    <a href="mailto:tiagozhou2@gmail.com" class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <span>tiagozhou2@gmail.com</span>
-                    </a>
-                    <a href="tel:+330768898378" class="contact-method">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>+33 07 68 89 83 78</span>
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer style="position: absolute; bottom: 0; width: 100%;">
         <p>© 2026 Tiago ZHOU. Tous droits réservés.</p>
     </footer>
 
     <!-- App Scripts -->
     <script src="js/script.js"></script>
+    <script src="js/sakura.js"></script>
 </body>
 
 </html>
