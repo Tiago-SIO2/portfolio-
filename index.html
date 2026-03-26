@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiago ZHOU | Développeur d'Applications</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Theme Switcher -->
+    <button id="theme-switch" aria-label="Changer le thème">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Tiago ZHOU</a>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" style="font-weight: 700; color: var(--accent-color);">Accueil</a></li>
+            <li><a href="pages/cv.html">CV</a></li>
+            <li><a href="pages/stages.html">Stages</a></li>
+            <li><a href="pages/projets.html">Projets</a></li>
+            <li><a href="pages/veille.html">Veille</a></li>
+            <li><a href="pages/contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+
+        <div class="hero-content section reveal"
+            style="text-align: left; max-width: 600px; padding-left: 5%; margin: 0;">
+            <span class="greeting" style="font-size: 1.5rem; letter-spacing: 2px;">Bonjour, je suis</span>
+            <h1 class="hero-title" style="margin: 10px 0; padding-top: 10px;">Tiago ZHOU</h1>
+            <h2 class="hero-subtitle">Étudiant en BTS SIO (option SLAM)</h2>
+            <p class="hero-desc" style="font-size: 1.1rem; margin-top: 20px;">
+                Passionné d’informatique et de solutions digitales, je conçois des outils pour simplifier la gestion et gagner en efficacité. Découvrez mon parcours et mes projets
+            </p>
+            <div class="hero-buttons" style="justify-content: flex-start;">
+                <a href="pages/cv.html" class="btn-primary">
+                    <i class="fas fa-user"></i> Mon profil
+                </a>
+                <a href="pages/projets.html" class="btn-secondary">
+                    <i class="fas fa-folder-open"></i> Voir mes projets
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="position: absolute; bottom: 0; width: 100%;">
+        <p>© 2026 Tiago ZHOU. Tous droits réservés.</p>
+    </footer>
+
+    <!-- App Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/sakura.js"></script>
+</body>
+
+</html>

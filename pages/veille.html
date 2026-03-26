@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique | Tiago ZHOU</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Theme Switcher -->
+    <button id="theme-switch" aria-label="Changer le thème">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Tiago ZHOU</a>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="stages.html">Stages</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="veille.html" style="font-weight: 700; color: var(--accent-color);">Veille</a></li>
+            <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section" style="padding-top: 150px; min-height: 100vh;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 2rem; text-align: center;">Veille
+                Technologique</h1>
+
+            <div class="glass-card" style="padding: 40px; margin-bottom: 40px;">
+                <h2 style="color: var(--accent-color); margin-bottom: 15px; font-size: 1.8rem;">La veille technologique,
+                    c'est quoi ?</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 30px;">
+                    La veille technologique est un processus continu et organisé qui consiste à surveiller, collecter,
+                    analyser et diffuser des informations sur les innovations et les tendances dans un domaine technique
+                    et scientifique donné.
+                </p>
+
+                <h2 style="color: var(--accent-color); margin-bottom: 15px; font-size: 1.8rem;">Le sujet de ma veille
+                    technologique :</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 15px; font-weight: 500;">
+                    Le thème que j'ai choisi pour ma veille est : " L'intégration de l'IA et du cloud dans le
+                    développement avec GitHub (Copilot & Codespaces) "
+                </p>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 30px;">
+                    J'ai choisi de me concentrer sur l'évolution des outils de développement, notamment l'écosystème
+                    GitHub. L'objectif est de comprendre comment l'intégration croissante de l'intelligence artificielle
+                    (IA) et des environnements de cloud computing (Cloud) transforme nos méthodes de travail. Mon
+                    analyse porte sur les actualités de deux outils phares : GitHub Copilot et GitHub Codespaces.
+                </p>
+            </div>
+
+            <h2 class="section-title" style="font-size: 2rem; margin-top: 60px;">Actualités GitHub Copilot & Codespaces
+                (Flux RSS)</h2>
+            <div id="rss-feed-container" class="rss-grid">
+                <!-- Les articles RSS seront injectés ici par JavaScript -->
+                <div style="text-align: center; width: 100%; grid-column: 1 / -1;">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--accent-color);"></i>
+                    <p style="margin-top: 10px;">Chargement des articles en cours...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Tiago ZHOU. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script src="../js/sakura.js"></script>
+</body>
+
+</html>
