@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Fâ - Tiago ZHOU</title>
+    <title>CanisPro - Tiago ZHOU</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,33 +53,95 @@
 
             <div>
                 <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">
-                    Contexte du Projet</h2>
+                    Présentation du Projet</h2>
                 <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left;">
-                    Ce projet consiste à créer une application web pour le centre CanisPro Éducation. L'objectif est de
-                    remplacer la gestion sur papier et tableurs par un outil numérique unique. Cette solution permet de
-                    centraliser les dossiers des chiens, d'organiser les plannings plus facilement et de mieux
-                    communiquer avec les clients.
+                    L'objectif de ce projet est de concevoir une plateforme web sur mesure pour le centre d'éducation canine CanisPro. Le but principal est de moderniser la gestion quotidienne en remplaçant les fichiers Excel et les dossiers au format papier par une solution digitale centralisée. Cet outil facilite grandement l'organisation des plannings, le suivi des animaux et fluidifie les échanges avec les propriétaires.
                 </p>
             </div>
-            
-                 <div style="text-align: center; margin-top: 10px;">
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">
+                    Technologies & Architecture</h2>
+                <ul class="tech-list"
+                    style="list-style-type: none; padding-left: 0; font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 30px;">
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check"
+                            style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span class="keyword" style="color: var(--text-primary); font-weight: 600;">Langages & Framework
+                            :
+                        </span> Utilisation des standards HTML/CSS, couplés à PHP, SQL et au framework Symfony pour un développement robuste.
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check"
+                            style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span class="keyword" style="color: var(--text-primary); font-weight: 600;">Base de données :
+
+                        </span> Conception via la méthode Merise et déploiement d'une base de données MySQL afin de gérer efficacement les profils clients, les chiens et les calendriers.
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check"
+                            style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span class="keyword" style="color: var(--text-primary); font-weight: 600;">Travail d'équipe :
+                        </span> Gestion des versions avec Git et hébergement sur GitHub pour assurer un travail collaboratif fluide au sein de l'équipe de développement.
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 30px; font-size: 2rem; text-align: left;">
+                    Interface & Fonctionnalités Clés</h2>
+
+                <div style="margin-bottom: 40px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.5rem; text-align: left;">
+                        Catalogue des Cours</h3>
+                    <p
+                        style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Présentation interactive des sessions d'entraînement proposées. Chaque fiche détaille les informations essentielles : niveau requis, description, prix, date et nombre de places encore libres, offrant aux utilisateurs un système de réservation simple et rapide.</p>
+                    <img src="../assets/CanisPro2.png" alt="Catalogue des Séances"
+                        style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.5rem; text-align: left;">
+                        Connexion & Sécurité</h3>
+                    <p
+                        style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Un portail d'authentification sécurisé garantissant un accès personnalisé, avec des interfaces et des droits spécifiques selon qu'il s'agisse d'un client ou d'un membre de l'équipe d'administration.</p>
+                    <img src="../assets/CanisPro3.png" alt="Espace Authentification"
+                        style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.5rem; text-align: left;">
+                        Espace Personnel & Suivi</h3>
+                    <p
+                        style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Une interface complète pour le suivi. Le tableau de bord affiche les chiens de l'utilisateur, 
+                        leur progression, les cours à venir, et inclut un 
+                        formulaire pour ajouter de nouveaux compagnons très facilement.</p>
+                    <img src="../assets/CanisPro4.png" alt="Tableau de Bord"
+                        style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
                 <a href="projets.html" class="btn-primary"
-                    style="display: inline-flex; align-items: center; gap: 10px;">
+                    style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 200px;">
                     <i class="fas fa-arrow-left"></i> Retour aux projets
                 </a>
+                <a href="https://github.com/jiirroh/CanisProGroupe-4" target="_blank" class="btn-secondary"
+                    style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-width: 200px;">
+                    <i class="fab fa-github" style="font-size: 1.2em;"></i> Voir le dépôt GitHub
+                </a>
             </div>
-        </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Tiago ZHOU. Tous droits réservés.</p>
+        <p>&copy; 2024 - 2026 Tiago ZHOU. Tous droits réservés.</p>
     </footer>
 
 
 
-            <script src="../js/script.js"></script>
-            <script src="../js/sakura.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/sakura.js"></script>
 </body>
 
 </html>
