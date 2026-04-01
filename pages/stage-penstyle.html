@@ -1,232 +1,190 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stage Penstyleshoes | Tiago ZHOU</title>
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .stage-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .stage-title {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-        }
-
-        .stage-meta {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .stage-content h3 {
-            font-size: 1.8rem;
-            margin: 30px 0 15px;
-            color: var(--text-primary);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        .stage-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .stage-content ul {
-            padding-left: 20px;
-            list-style-type: none;
-            margin-bottom: 20px;
-        }
-
-        .stage-content ul li {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .stage-content ul li::before {
-            content: '\f0da';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: var(--accent-color);
-            position: absolute;
-            left: -20px;
-        }
-
-        .tech-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            justify-content: center;
-        }
-
-        .tech-tag {
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent-color);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            border: 1px solid var(--accent-glow);
-        }
-    </style>
 </head>
 
-<body style="min-height: 100vh; padding: 40px 20px;">
+<body>
+    <!-- Theme Switcher -->
+    <button id="theme-switch" aria-label="Changer le thème">
+        <i class="fas fa-moon"></i>
+    </button>
 
-    <a href="stages.html" class="btn-secondary" style="position: fixed; top: 20px; left: 20px; z-index: 100;">
-        <i class="fas fa-arrow-left"></i> Retour aux stages
-    </a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Tiago ZHOU</a>
 
-    <div class="glass-card" style="max-width: 900px; margin: 40px auto; padding: 50px;">
-        <div class="stage-header">
-            <h1 class="stage-title">Penstyleshoes</h1>
-            <div class="stage-meta">
-                <i class="fas fa-calendar-alt"></i> 2026 (2ème année de BTS SIO) | <i class="fas fa-map-marker-alt"></i>
-                Bordeaux
-            </div>
-            <div class="tech-tags">
-                <span class="tech-tag"><i class="fab fa-wordpress"></i> WordPress</span>
-                <span class="tech-tag"><i class="fab fa-elementor"></i> Elementor</span>
-                <span class="tech-tag"><i class="fas fa-shopping-cart"></i> E-commerce</span>
-                <span class="tech-tag"><i class="fas fa-paint-brush"></i> UI/UX Design</span>
-            </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
 
-        <div class="stage-content">
-            <h3>Contexte de la mission</h3>
-            <p>Lors de ce stage de 2ème année, on m'a confié la mission de créer l'identité numérique d'un commerce
-                spécialisé dans le tatouage. L'objectif principal était de concevoir un site vitrine attractif intégrant
-                une véritable solution e-commerce pour la vente de produits et la réservation de services.</p>
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="stages.html" style="font-weight: 700; color: var(--accent-color);">Stages</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
 
-            <h3>Mes réalisations</h3>
-            <ul>
-                <li><strong>Conception du Design :</strong> Élaboration d'une charte graphique sombre et élégante,
-                    correspondant parfaitement à l'esthétique du tatouage.</li>
-                <li><strong>Développement complet sous WordPress :</strong> Installation, configuration et sécurisation
-                    du CMS.</li>
-                <li><strong>Intégration avec Elementor :</strong> Utilisation d'Elementor Pro pour créer des pages
-                    sur-mesure (Accueil, Galerie, Boutique, Contact) sans dépendre de thèmes préconçus restrictifs.</li>
-                <li><strong>Mise en place de la boutique :</strong> Configuration de WooCommerce pour la gestion du
-                    catalogue, du panier et du processus de paiement.</li>
-                <li><strong>Optimisation Responsive :</strong> Ajustement minutieux des marges, tailles de polices et
-                    comportements des grilles pour garantir un affichage parfait sur ordinateur, tablette et smartphone.
-                </li>
-            </ul>
+    <!-- MAIN CONTENT -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 100px; min-height: 80vh;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; gap: 60px;">
 
-            <h3>Compétences acquises</h3>
-            <p>Ce stage m'a permis de travailler en totale autonomie sur un projet complet, de la conception initiale à
-                la mise en production. J'ai renforcé ma capacité à comprendre le besoin d'un client, à structurer un
-                site e-commerce et à maîtriser des outils professionnels comme WordPress et Elementor.</p>
-            <!-- SECTION OUTILS -->
-            <div style="margin-top: 50px;">
-                <h3 style="border-bottom: none; margin-bottom: 5px;">Outils utilisés</h3>
-                <p style="margin-bottom: 25px; color: var(--text-secondary);">Pour la réalisation de la boutique en
-                    ligne, j'ai utilisé principalement deux outils :</p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                    <div class="glass-card"
-                        style="padding: 25px; text-align: left; background: rgba(0,0,0,0.1); border-top: 3px solid #d5327b;">
-                        <i class="fab fa-elementor" style="font-size: 3.5rem; color: #d5327b; margin-bottom: 15px;"></i>
-                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">Elementor</h4>
-                        <p style="font-size: 0.95rem; color: var(--text-secondary);"><strong>Elementor</strong> est un
-                            constructeur de pages intuitif pour WordPress qui permet de concevoir des sites web
-                            professionnels par glisser-déposer, sans aucune ligne de code.</p>
+            <header style="text-align: center;">
+                <h1 style="font-size: 3rem; margin-bottom: 10px; color: var(--text-primary);">Penstyleshoes</h1>
+                <div style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 20px;">
+                    <i class="fas fa-calendar-alt"></i> 2026 (2ème année de BTS SIO) | <i class="fas fa-map-marker-alt"></i> Bordeaux
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+                    <span style="color: var(--accent-color);"><i ></i> WordPress</span>
+                    <span style="color: var(--text-secondary);">•</span>
+                    <span style="color: var(--accent-color);"><i ></i> Elementor</span>
+                    <span style="color: var(--text-secondary);">•</span>
+                    <span style="color: var(--accent-color);"><i ></i> E-commerce</span>
+                    <span style="color: var(--text-secondary);">•</span>
+                    <span style="color: var(--accent-color);"><i ></i> UI/UX Design</span>
+                </div>
+            </header>
+
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Contexte de la mission</h2>
+                <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left;">
+                    Lors de ce stage de 2ème année, on m'a confié la mission de créer l'identité numérique d'un commerce spécialisé dans le tatouage. L'objectif principal était de concevoir un site vitrine attractif intégrant une véritable solution e-commerce pour la vente de produits et la réservation de services.
+                </p>
+            </div>
+
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Mes réalisations</h2>
+                <ul class="tech-list" style="list-style-type: none; padding-left: 0; font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left;">
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Conception du Design :</span> Élaboration d'une charte graphique sombre et élégante, correspondant parfaitement à l'esthétique du tatouage.
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Développement complet sous WordPress :</span> Installation, configuration et sécurisation du CMS.
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Intégration avec Elementor :</span> Utilisation d'Elementor Pro pour créer des pages sur-mesure (Accueil, Galerie, Boutique, Contact) sans dépendre de thèmes préconçus restrictifs.
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Mise en place de la boutique :</span> Configuration de WooCommerce pour la gestion du catalogue, du panier et du processus de paiement.
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Optimisation Responsive :</span> Ajustement minutieux des marges, tailles de polices et comportements des grilles pour garantir un affichage parfait sur ordinateur, tablette et smartphone.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Compétences acquises</h2>
+                <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left;">
+                    Ce stage m'a permis de travailler en totale autonomie sur un projet complet, de la conception initiale à la mise en production. J'ai renforcé ma capacité à comprendre le besoin d'un client, à structurer un site e-commerce et à maîtriser des outils professionnels comme WordPress et Elementor.
+                </p>
+            </div>
+
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Outils utilisés</h2>
+                <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 30px;">
+                    Pour la réalisation de la boutique en ligne, j'ai utilisé principalement deux outils :
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+                    <div style="text-align: left;">
+                        <i class="fab fa-elementor" style="font-size: 3rem; color: #d5327b; margin-bottom: 15px;"></i>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-primary);">Elementor</h4>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;"><strong>Elementor</strong> est un constructeur de pages intuitif pour WordPress qui permet de concevoir des sites web professionnels par glisser-déposer, sans aucune ligne de code.</p>
                     </div>
-                    <div class="glass-card"
-                        style="padding: 25px; text-align: left; background: rgba(0,0,0,0.1); border-top: 3px solid #21759b;">
-                        <i class="fab fa-wordpress" style="font-size: 3.5rem; color: #21759b; margin-bottom: 15px;"></i>
-                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">WordPress</h4>
-                        <p style="font-size: 0.95rem; color: var(--text-secondary);"><strong>WordPress</strong> est le
-                            système de gestion de contenu (CMS) le plus populaire au monde, utilisé pour créer et gérer
-                            des sites web dynamiques. Il offre une flexibilité totale.</p>
+                    <div style="text-align: left;">
+                        <i class="fab fa-wordpress" style="font-size: 3rem; color: #21759b; margin-bottom: 15px;"></i>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-primary);">WordPress</h4>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;"><strong>WordPress</strong> est le système de gestion de contenu (CMS) le plus populaire au monde, utilisé pour créer et gérer des sites web dynamiques. Il offre une flexibilité totale.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- SECTION MAQUETTES & GALERIE -->
-            <div style="margin-top: 50px;">
-                <h3 style="border-bottom: none; margin-bottom: 20px;">Galerie & Maquettes</h3>
-                <p style="margin-bottom: 25px; color: var(--text-secondary);">Ces deux dernières semaines, je me suis
-                    concentré sur la conception des versions desktop et mobiles du site web.</p>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                    <!-- Maquette PC -->
-                    <div class="glass-card" style="padding: 20px; display: flex; flex-direction: column;">
-                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Version maquette</h4>
-                        <p style="font-size: 0.85rem; margin-bottom: 15px; color: var(--text-secondary);">Ceci est la
-                            maquette que j'ai pu réaliser sur Wordpress avec toutes les fonctionnalités.</p>
-                        <div
-                            style="width: 100%; border-radius: 10px; overflow: hidden; background: rgba(0,0,0,0.3); position: relative; aspect-ratio: 16/10; flex-grow: 1; border: 1px dashed var(--border-color);">
-                            <img src="../assets/maquette_pc.png" alt="Maquette PC"
-                                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;"
-                                onmouseover="this.style.transform='scale(1.03)'"
-                                onmouseout="this.style.transform='scale(1)'">
-                        </div>
-                    </div>
-                    <!-- Version Finale PC -->
-                    <div class="glass-card" style="padding: 20px; display: flex; flex-direction: column;">
-                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Version sur pc</h4>
-                        <p style="font-size: 0.85rem; margin-bottom: 15px; color: var(--text-secondary);">Ceci est la
-                            version que j'ai pue réaliser grâce à l'utilisation de l'extension Elementor.</p>
-                        <div
-                            style="width: 100%; border-radius: 10px; overflow: hidden; background: rgba(0,0,0,0.3); position: relative; aspect-ratio: 16/10; flex-grow: 1; border: 1px dashed var(--border-color);">
-                            <img src="../assets/version_pc.png" alt="Version PC finale"
-                                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;"
-                                onmouseover="this.style.transform='scale(1.03)'"
-                                onmouseout="this.style.transform='scale(1)'">
-                        </div>
-                    </div>
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Galerie & Maquettes</h2>
+                <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 40px;">
+                    Voici un aperçu des différentes interfaces réalisées :
+                </p>
+                   
+                <div style="margin-bottom: 60px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.5rem; text-align: left;">Accueil du site</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Une page d'accueil inspirée par l'énergie spirituelle, qui est le thème central de ce salon de tatouage.
+                    </p>
+                    <img src="../assets/accueil.png" alt="Accueil du site" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
                 </div>
 
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px;">
-                    <!-- Maquette Mobile -->
-                    <div class="glass-card" style="padding: 20px; display: flex; flex-direction: column;">
-                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Version maquette mobile</h4>
-                        <p style="font-size: 0.85rem; margin-bottom: 15px; color: var(--text-secondary);">Ceci est la
-                            maquette mobile que j'ai du réaliser.</p>
-                        <div
-                            style="width: 100%; border-radius: 10px; overflow: hidden; background: rgba(0,0,0,0.3); position: relative; aspect-ratio: 9/16; max-height: 400px; margin: 0 auto; flex-grow: 1; border: 1px dashed var(--border-color);">
-                            <img src="../assets/maquette_mobile.png" alt="Maquette Mobile"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.6s ease;"
-                                onmouseover="this.style.transform='scale(1.03)'"
-                                onmouseout="this.style.transform='scale(1)'">
-                        </div>
-                    </div>
-                    <!-- Version Finale Mobile -->
-                    <div class="glass-card" style="padding: 20px; display: flex; flex-direction: column;">
-                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Version sur mobile</h4>
-                        <p style="font-size: 0.85rem; margin-bottom: 15px; color: var(--text-secondary);">Ceci est la
-                            version que j'ai pue réaliser sur format mobile.</p>
-                        <div
-                            style="width: 100%; border-radius: 10px; overflow: hidden; background: rgba(0,0,0,0.3); position: relative; aspect-ratio: 9/16; max-height: 400px; margin: 0 auto; flex-grow: 1; border: 1px dashed var(--border-color);">
-                            <img src="../assets/version_mobile.png" alt="Version Mobile finale"
-                                style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.6s ease;"
-                                onmouseover="this.style.transform='scale(1.03)'"
-                                onmouseout="this.style.transform='scale(1)'">
-                        </div>
-                    </div>
+                <div style="margin-bottom: 60px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.5rem; text-align: left;">Prise de RDV</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Cette section est dédiée à la prise de rendez-vous. Elle redirige vers la plateforme externe Calendly, permettant aux clients de réserver une séance selon les disponibilités de la tatoueuse.
+                    </p>
+                    <img src="../assets/rdv.png" alt="Espace rdv" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
+                </div>
+
+                 <div style="margin-bottom: 60px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.5rem; text-align: left;">Cadeau</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Voici la section e-commerce où il est possible de commander des cartes cadeaux à offrir à ses proches.
+                    </p>
+                    <img src="../assets/cadeaux.png" alt="Espace cadeau" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto; margin-bottom: 20px;">
+                     <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Le client peut choisir le montant de la carte cadeau avant de procéder à l'achat.
+                    </p>
+                    <img src="../assets/cadeaux2.png" alt="Espace e-commerce" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
+                </div>
+
+                <div style="margin-bottom: 60px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.5rem; text-align: left;">Savoir</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Cette section regroupe la foire aux questions (FAQ) pour répondre aux interrogations courantes des clients.
+                    </p>
+                    <img src="../assets/savoir.png" alt="Espace savoir" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">    
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h3 style="color: var(--text-primary); margin-bottom: 15px; font-size: 1.5rem; text-align: left;">Partie Avis</h3>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
+                        Une section dédiée aux témoignages, mettant en avant les avis et ressentis des personnes s'étant fait tatouer.
+                    </p>
+                    <img src="../assets/avis.png" alt="Espace avis" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
                 </div>
             </div>
 
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="stages.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-arrow-left"></i> Retour aux stages
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 - 2025 Tiago ZHOU. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
     <script src="../js/sakura.js"></script>
 </body>
 

@@ -1,190 +1,140 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stage Valeur Bâti | Tiago ZHOU</title>
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .stage-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .stage-title {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-        }
-
-        .stage-meta {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .stage-content h3 {
-            font-size: 1.8rem;
-            margin: 30px 0 15px;
-            color: var(--text-primary);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        .stage-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .stage-content ul {
-            padding-left: 20px;
-            list-style-type: none;
-            margin-bottom: 20px;
-        }
-
-        .stage-content ul li {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .stage-content ul li::before {
-            content: '\f0da';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: var(--accent-color);
-            position: absolute;
-            left: -20px;
-        }
-
-        .tech-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            justify-content: center;
-        }
-
-        .tech-tag {
-            background: rgba(59, 130, 246, 0.1);
-            color: var(--accent-color);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            border: 1px solid var(--accent-glow);
-        }
-    </style>
 </head>
 
-<body style="min-height: 100vh; padding: 40px 20px;">
+<body>
+    <!-- Theme Switcher -->
+    <button id="theme-switch" aria-label="Changer le thème">
+        <i class="fas fa-moon"></i>
+    </button>
 
-    <a href="stages.html" class="btn-secondary" style="position: fixed; top: 20px; left: 20px; z-index: 100;">
-        <i class="fas fa-arrow-left"></i> Retour aux stages
-    </a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Tiago ZHOU</a>
 
-    <div class="glass-card" style="max-width: 900px; margin: 40px auto; padding: 50px;">
-        <div class="stage-header">
-            <h1 class="stage-title">Valeur Bâti</h1>
-            <div class="stage-meta">
-                <i class="fas fa-calendar-alt"></i> 2025 (1ère année de BTS SIO) | <i class="fas fa-map-marker-alt"></i>
-                Landes
-            </div>
-            <div class="tech-tags">
-                <span class="tech-tag"><i class="fas fa-bolt"></i> Zapier</span>
-                <span class="tech-tag"><i class="fas fa-table"></i> Airtable / Baserow</span>
-                <span class="tech-tag"><i class="fas fa-cogs"></i> No-Code Ops</span>
-                <span class="tech-tag"><i class="fas fa-project-diagram"></i> Workflow Automation</span>
-            </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
 
-        <div class="stage-content">
-            <h3>Contexte de la mission</h3>
-            <p>L'entreprise Valeur Bâti faisait face à un volume très important de tâches administratives manuelles
-                liées à la gestion des achats, des devis et des factures. Ces processus engendraient des pertes de temps
-                et des risques d'erreurs de saisie. Mon rôle consistait à digitaliser et automatiser ces flux pour faire
-                gagner du temps aux équipes.</p>
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="stages.html" style="font-weight: 700; color: var(--accent-color);">Stages</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
 
-            <h3>Mes réalisations</h3>
-            <ul>
-                <li><strong>Analyse des processus :</strong> Étude approfondie des flux de données existants (réception
-                    d'emails de facturation, téléchargement manuel, saisie Excel).</li>
-                <li><strong>Base de données centralisée :</strong> Création d'une structure relationnelle propre dans
-                    Airtable / Baserow pour centraliser tous les contacts, chantiers, devis et factures.</li>
-                <li><strong>Automatisation avec Zapier :</strong> Mise en place de "Zaps" permettant par exemple :
-                    l'extraction automatique des pièces jointes d'emails filtrés, l'insertion des métadonnées dans la
-                    base de données, et l'envoi de notifications Slack/Email à l'équipe.</li>
-                <li><strong>Documentation :</strong> Rédaction de guides d'utilisation internes pour que les
-                    collaborateurs puissent comprendre et maintenir ces automatisations.</li>
-            </ul>
+    <!-- MAIN CONTENT -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 100px; min-height: 80vh;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px; display: flex; flex-direction: column; gap: 60px;">
 
-            <h3>Compétences acquises</h3>
-            <p>Cette première expérience significative en entreprise m'a ouvert les portes du "No-code operations" et de
-                l'automatisation. J'ai compris l'importance cruciale d'une donnée bien structurée et l'impact immédiat
-                que la technologie peut avoir sur la productivité d'une PME.</p>
-            <!-- SECTION OUTILS NO CODE -->
-            <div style="margin-top: 50px;">
-                <h3 style="border-bottom: none; margin-bottom: 5px;">Outils No-code</h3>
-                <p style="margin-bottom: 25px; color: var(--text-secondary);">Les outils No-code sont des plateformes
-                    numériques qui permettent de gagner du temps et d'améliorer la fiabilité de l'organisation. Durant
-                    ce stage, les outils suivants ont été utilisés :</p>
+            <header style="text-align: center;">
+                <h1 style="font-size: 3rem; margin-bottom: 10px; color: var(--text-primary);">Valeur Bâti</h1>
+                <div style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 20px;">
+                    <i class="fas fa-calendar-alt"></i> 2025 (1ère année de BTS SIO) | <i class="fas fa-map-marker-alt"></i> Landes
+                </div>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+                    <span style="color: var(--accent-color);">Zapier</span>
+                    <span style="color: var(--text-secondary);">•</span>
+                    <span style="color: var(--accent-color);">Airtable / Baserow</span>
+                    <span style="color: var(--text-secondary);">•</span>
+                    <span style="color: var(--accent-color);">No-Code Ops</span>
+                    <span style="color: var(--text-secondary);">•</span>
+                    <span style="color: var(--accent-color);">Workflow Automation</span>
+                </div>
+            </header>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                    <!-- Zapier -->
-                    <div class="glass-card"
-                        style="padding: 25px; text-align: left; background: rgba(0,0,0,0.1); border-top: 3px solid #ff4a00;">
-                        <h2
-                            style="font-family: inherit; font-size: 2.5rem; font-weight: 900; letter-spacing: -2px; color: var(--text-primary); margin-bottom: 15px;">
-                            _zapier</h2>
-                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">Zapier</h4>
-                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Zapier est un <strong>outil
-                                d'automatisation en ligne</strong> qui connecte vos applications et services web
-                            préférés. Il s'adresse à tous, des freelances aux grandes entreprises.</p>
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Contexte de la mission</h2>
+                <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left;">
+                    L'entreprise Valeur Bâti faisait face à un volume très important de tâches administratives manuelles liées à la gestion des achats, des devis et des factures. Ces processus engendraient des pertes de temps et des risques d'erreurs de saisie. Mon rôle consistait à digitaliser et automatiser ces flux pour faire gagner du temps aux équipes.
+                </p>
+            </div>
+
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Mes réalisations</h2>
+                <ul class="tech-list" style="list-style-type: none; padding-left: 0; font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left;">
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Analyse des processus :</span> Étude approfondie des flux de données existants (réception d'emails de facturation, téléchargement manuel, saisie Excel).
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Base de données centralisée :</span> Création d'une structure relationnelle propre dans Airtable / Baserow pour centraliser tous les contacts, chantiers, devis et factures.
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Automatisation avec Zapier :</span> Mise en place de "Zaps" permettant par exemple : l'extraction automatique des pièces jointes d'emails filtrés, l'insertion des métadonnées dans la base de données, et l'envoi de notifications Slack/Email à l'équipe.
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                        <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
+                        <span style="color: var(--text-primary); font-weight: 600;">Documentation :</span> Rédaction de guides d'utilisation internes pour que les collaborateurs puissent comprendre et maintenir ces automatisations.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Compétences acquises</h2>
+                <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left;">
+                    Cette première expérience significative en entreprise m'a ouvert les portes du "No-code operations" et de l'automatisation. J'ai compris l'importance cruciale d'une donnée bien structurée et l'impact immédiat que la technologie peut avoir sur la productivité d'une PME.
+                </p>
+            </div>
+
+            <div>
+                <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">Outils No-code</h2>
+                <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 30px;">
+                    Les outils No-code sont des plateformes numériques qui permettent de gagner du temps et d'améliorer la fiabilité de l'organisation. Durant ce stage, les outils suivants ont été utilisés :
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+                    <div style="text-align: left;">
+                        <h4 style="font-size: 2rem; font-weight: 900; letter-spacing: -1px; color: #ff4a00; margin-bottom: 15px;">zapier</h4>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-primary);">Zapier</h4>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;"><strong>Zapier</strong> est un outil d'automatisation en ligne qui connecte vos applications et services web préférés. Il s'adresse à tous, des freelances aux grandes entreprises.</p>
                     </div>
-
-                    <!-- Baserow -->
-                    <div class="glass-card"
-                        style="padding: 25px; text-align: left; background: rgba(0,0,0,0.1); border-top: 3px solid #0d8cf5;">
-                        <h2
-                            style="font-family: inherit; font-size: 2.2rem; font-weight: 800; color: #0d8cf5; margin-bottom: 15px;">
-                            <i class="fas fa-server"></i> Baserow
-                        </h2>
-                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">Baserow</h4>
-                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Baserow est une plateforme
-                            <strong>no-code</strong> qui permet de créer et de gérer des bases de données de manière
-                            simple et visuelle. Il se positionne comme une alternative aux tableurs classiques.
-                        </p>
+                    <div style="text-align: left;">
+                        <i class="fas fa-server" style="font-size: 2.5rem; color: #0d8cf5; margin-bottom: 15px;"></i>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-primary);">Baserow</h4>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;"><strong>Baserow</strong> est une plateforme no-code qui permet de créer et de gérer des bases de données de manière simple et visuelle. Il se positionne comme une alternative aux tableurs classiques.</p>
                     </div>
-
-                    <!-- Airtable -->
-                    <div class="glass-card"
-                        style="padding: 25px; text-align: left; background: rgba(0,0,0,0.1); border-top: 3px solid #f82b60;">
-                        <h2
-                            style="font-family: inherit; font-size: 2.2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 15px;">
-                            <i class="fas fa-gem" style="color: #f82b60;"></i> Airtable
-                        </h2>
-                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">Airtable</h4>
-                        <p style="font-size: 0.95rem; color: var(--text-secondary);">Airtable est <strong>une plateforme
-                                en ligne, simple à utiliser, pour créer et partager des bases de données</strong>.
-                            L'interface est simple et permet à quiconque de créer une base de données en quelques
-                            minutes.</p>
+                     <div style="text-align: left;">
+                        <h4 style="font-size: 2rem; font-weight: 900; letter-spacing: -1px; color: #d52e2e; margin-bottom: 15px;">Airtable</h4>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-primary);">Airtable</h4>
+                        <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6;"><strong>Airtable</strong> est une plateforme en ligne, simple à utiliser, pour créer et partager des bases de données. L'interface est simple et permet à quiconque de créer une base de données en quelques minutes.</p>
                     </div>
                 </div>
             </div>
 
+            <div style="text-align: center; margin-top: 10px;">
+                <a href="stages.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-arrow-left"></i> Retour aux stages
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 - 2025 Tiago ZHOU. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
     <script src="../js/sakura.js"></script>
 </body>
 
