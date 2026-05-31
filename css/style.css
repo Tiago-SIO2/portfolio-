@@ -772,6 +772,19 @@ ul {
     border-color: var(--accent-color);
 }
 
+.project-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .project-images-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .archi-img {
     width: 35%;
     min-width: 280px;
