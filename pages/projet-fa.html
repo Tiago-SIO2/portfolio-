@@ -47,8 +47,7 @@
 
             <header style="text-align: center;">
                 <h1 style="font-size: 3rem; margin-bottom: 30px; color: var(--text-primary);">Projet Fâ</h1>
-                <img src="../assets/accueille.png" alt="Aperçu de la page d'accueil du Projet Fâ"
-                    style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
+                <img src="../assets/accueille.png" alt="Aperçu de la page d'accueil du Projet Fâ" class="project-img">
             </header>
 
             <div>
@@ -66,48 +65,18 @@
             <div>
                 <h2 style="color: var(--accent-color); margin-bottom: 20px; font-size: 2rem; text-align: left;">
                     Architecture</h2>
-                <ul class="tech-list"
-                    style="list-style-type: none; padding-left: 0; font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 30px;">
-                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <i class="fas fa-check"
-                            style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
-                        <span class="keyword" style="color: var(--text-primary); font-weight: 600;">Architecture
-                            logicielle :</span> Implémentation d'un design pattern MVC sans framework pour une
-                        séparation stricte des responsabilités.
-                    </li>
-                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <i class="fas fa-check"
-                            style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
-                        <span class="keyword" style="color: var(--text-primary); font-weight: 600;">Développement
-                            Backend :</span> Programmation en PHP 8 natif exploitant le typage strict et les attributs.
-                    </li>
-                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <i class="fas fa-check"
-                            style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
-                        <span class="keyword" style="color: var(--text-primary); font-weight: 600;">Persistance des
-                            données :</span> Mise en place du pattern DAO avec PDO pour une gestion sécurisée des
-                        interactions SQL.
-                    </li>
-                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <i class="fas fa-check"
-                            style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
-                        <span class="keyword" style="color: var(--text-primary); font-weight: 600;">Sécurité :</span>
-                        Protection contre les failles critiques (Injections SQL, XSS) et hashage sécurisé des données
-                        sensibles.
-                    </li>
-                    <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                        <i class="fas fa-check"
-                            style="color: var(--accent-color); position: absolute; left: 0; top: 6px;"></i>
-                        <span class="keyword" style="color: var(--text-primary); font-weight: 600;">Méthodologie
-                            :</span> Pilotage du projet sous SCRUM.
-                    </li>
-                </ul>
+                <div class="project-tech-container">
+                    <span class="project-tech-badge">PHP 8</span>
+                    <span class="project-tech-badge">MySQL</span>
+                    <span class="project-tech-badge">Architecture MVC</span>
+                    <span class="project-tech-badge">Pattern DAO</span>
+                    <span class="project-tech-badge">Méthodologie SCRUM</span>
+                </div>
                 <p
                     style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.8; text-align: left; margin-bottom: 20px;">
                     Voici à quoi ressemble notre architecture :
                 </p>
-                <img src="../assets/archi.png" alt="Schéma d'architecture"
-                    style="width: 30%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
+                <img src="../assets/archi.png" alt="Schéma d'architecture" class="archi-img">
             </div>
 
             <div>
@@ -120,8 +89,7 @@
                     billets, et le système calcule automatiquement le prix total, même si le bouton de confirmation
                     n'est pas encore relié à la base de données.
                 </p>
-                <img src="../assets/reservation.png" alt="Interface de réservation"
-                    style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-color); display: block; margin: 0 auto;">
+                <img src="../assets/reservation.png" alt="Interface de réservation" class="project-img">
             </div>
 
             <div style="text-align: center; margin-top: 10px;">
